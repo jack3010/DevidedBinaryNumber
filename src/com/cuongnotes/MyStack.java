@@ -22,4 +22,12 @@ public class MyStack {
     public int peek() {
         return stackArray[top];
     }
+
+    public boolean isEmpty() {
+        return (top == -1);
+    }
+
+    public boolean isFull() {
+        return (top == maxSize - 1);
+    }
 }
