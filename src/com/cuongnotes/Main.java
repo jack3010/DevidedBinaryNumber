@@ -10,14 +10,14 @@ public class Main {
     }
     public void devidedNumberToBinary(int number) {
         MyStack myStack = new MyStack(100);
-        number = number / 2;
-        if (number % 2 == 0) {
-
-        } else {
-
+        while (number > 0) {
+            myStack.push(number % 2);
+            System.out.println("Push value to stack " + (number %2));
+            number = number / 2;
         }
-
-        System.out.println(number);
+        while (!myStack.isEmpty()) {
+            System.out.print(myStack.pop());
+        }
     }
 
 }
